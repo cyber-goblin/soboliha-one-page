@@ -116,31 +116,24 @@ export default function Hero() {
             {/* Инфо-баннер */}
             {phase === "done" && (
                 <div
-                    /* Мобилка: снизу по центру, ~90vw. Десктоп: как было справа по центру */
                     className="
-    absolute z-[40]
+      absolute z-[40]
+      left-1/2 -translate-x-1/2 bottom-6 w-[92vw]
+      md:bottom-auto md:top-1/2 md:-translate-y-1/2
+      md:left-auto md:translate-x-0 md:right-[clamp(12px,2vw,32px)]
 
-    /* мобилка */
-    left-1/2 -translate-x-1/2 bottom-6 w-[92vw]
+      /* было: md:w-[clamp(380px,32vw,440px)] lg:w-[clamp(460px,34vw,540px)] xl:w-[clamp(500px,36vw,580px)] */
+      md:w-[clamp(340px,28vw,400px)]
+      lg:w-[clamp(420px,30vw,500px)]
+      xl:w-[clamp(480px,32vw,560px)]
 
-    /* ≥ md (лэптопы) */
-    md:bottom-auto md:top-1/2 md:-translate-y-1/2
-    md:left-auto md:translate-x-0
-    md:right-[clamp(12px,2vw,32px)]
-    md:w-[clamp(380px,32vw,440px)]   /* чуть шире, чтобы иконки влезли */
-
-    /* ≥ lg (шире экраны) */
-    lg:w-[clamp(460px,34vw,540px)]
-    xl:w-[clamp(500px,36vw,580px)]
-
-    rounded-2xl bg-[#0e2036]/80 backdrop-blur-[2px] text-white
-    shadow-[0_10px_30px_rgba(0,0,0,.35)]
-    px-4 py-5 md:px-6 md:py-8 lg:px-8 lg:py-10
-  "
+      rounded-2xl bg-[#0e2036]/80 backdrop-blur-[2px] text-white
+      shadow-[0_10px_30px_rgba(0,0,0,.35)]
+      px-4 py-5 md:px-6 md:py-8 lg:px-8 lg:py-10
+      overflow-hidden     /* добавили: чтобы контент не вылезал за края */
+    "
                 >
-                    {/* Внутри — компактная сетка на мобиле */}
-                    <div className="grid grid-cols-[1fr_auto_1fr] items-start gap-6 md:gap-10">
-                        {/* ЛЕВО */}
+                    <div className="grid grid-cols-[1fr_auto_1fr] items-start gap-6 md:gap-8">
                         <div className="flex flex-col items-start">
                             <div className="text-4xl md:text-6xl font-extrabold leading-none">17&nbsp;га</div>
                             <div className="text-base md:text-xl opacity-90 leading-snug mt-1">
@@ -148,56 +141,44 @@ export default function Hero() {
                             </div>
                         </div>
 
-                        {/* Вертикальная линия —   */}
                         <div className="w-[2px] md:w-[3px] bg-white/85 rounded-full self-stretch" />
 
                         {/* ПРАВО */}
-                        <div className="flex flex-col items-center md:items-start col-span-1">
-                            <div className="text-base md:text-xl font-semibold mb-3 md:mb-4 leading-tight text-center md:text-left">
+                        <div className="flex flex-col items-center md:items-start col-span-1 min-w-0">
+                            <div className="text-base md:text-xl font-semibold mb-3 md:mb-3 leading-tight text-center md:text-left">
                                 все<br className="hidden md:block" /> коммуникации
                             </div>
-                            <div className="flex gap-4 md:gap-7">
+
+                            {/* ИКОНКИ */}
+                            <div className="flex flex-wrap gap-3 md:gap-4 pr-1">
+                                {/* 1 */}
                                 <div className="flex flex-col items-center">
-                                    <div className="w-14 h-14 md:w-18 md:h-18 flex items-center justify-center border border-white/80 rounded-md">
-                                        <img src={lampIcon} alt="свет" className="w-8 h-8 md:w-10 md:h-10" />
+                                    <div className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center border border-white/80 rounded-md">
+                                        <img src={lampIcon} alt="свет" className="w-7 h-7 md:w-8 md:h-8" />
                                     </div>
-                                    <span className="mt-1 md:mt-2 text-xs md:text-base opacity-90">свет</span>
+                                    <span className="mt-1 md:mt-1 text-xs md:text-sm opacity-90">свет</span>
                                 </div>
+                                {/* 2 */}
                                 <div className="flex flex-col items-center">
-                                    <div className="w-14 h-14 md:w-18 md:h-18 flex items-center justify-center border border-white/80 rounded-md">
-                                        <img src={gasIcon} alt="газ" className="w-8 h-8 md:w-10 md:h-10" />
+                                    <div className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center border border-white/80 rounded-md">
+                                        <img src={gasIcon} alt="газ" className="w-7 h-7 md:w-8 md:h-8" />
                                     </div>
-                                    <span className="mt-1 md:mt-2 text-xs md:text-base opacity-90">газ</span>
+                                    <span className="mt-1 md:mt-1 text-xs md:text-sm opacity-90">газ</span>
                                 </div>
+                                {/* 3 */}
                                 <div className="flex flex-col items-center">
-                                    <div className="w-14 h-14 md:w-18 md:h-18 flex items-center justify-center border border-white/80 rounded-md">
-                                        <img src={waterIcon} alt="вода" className="w-8 h-8 md:w-10 md:h-10" />
+                                    <div className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center border border-white/80 rounded-md">
+                                        <img src={waterIcon} alt="вода" className="w-7 h-7 md:w-8 md:h-8" />
                                     </div>
-                                    <span className="mt-1 md:mt-2 text-xs md:text-base opacity-90">вода</span>
+                                    <span className="mt-1 md:mt-1 text-xs md:text-sm opacity-90">вода</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* Горизонтальная линия */}
-                    <div className="mt-5 md:mt-8 h-[2px] md:h-[3px] bg-white/85 rounded-full" />
+                    <div className="mt-5 md:mt-6 h-[2px] md:h-[3px] bg-white/85 rounded-full" />
 
-                    {/* Кнопка */}
-                    <button
-                        className="
-    mt-4 md:mt-6 w-full
-    rounded-md border border-[#d7b68a]/85
-    bg-transparent
-    py-2 md:py-3           /* меньше вертикальные паддинги */
-    px-3                   /* горизонтальный тоже можно чуть уменьшить */
-    font-semibold
-    text-[#d7b68a]
-    text-sm md:text-base   /* текст меньше */
-    tracking-wide          /* чуть больше межбукв spacing чтобы не слипалось */
-    hover:bg-[#d7b68a] hover:text-black
-    transition
-  "
-                    >
+                    <button className="mt-4 md:mt-5 w-full rounded-md border border-[#d7b68a]/85 bg-transparent py-2 md:py-3 px-3 font-semibold text-[#d7b68a] text-sm md:text-base tracking-wide hover:bg-[#d7b68a] hover:text-black transition">
                         ЗАКАЗАТЬ ЗВОНОК
                     </button>
                 </div>
