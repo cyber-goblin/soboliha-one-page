@@ -4,7 +4,6 @@ import logo from "../../assets/img/ui/logo-whitee.png";
 import banner from "../../assets/video/banner.mp4";
 import Header from "../../components/sections/Header";
 import NavHero from "../../components/sections/NavHero";
-import PhoneFab from "../../components/PhoneFab";
 import waterIcon from "../../assets/img/water_icon.svg";
 import lampIcon from "../../assets/img/lamp_icon.svg";
 import gasIcon from "../../assets/img/fire_icon.svg";
@@ -171,7 +170,7 @@ export default function Hero() {
                     </button>
                 </div>
             )}
-            <PhoneFab />
+
         </section>
     );
 }
