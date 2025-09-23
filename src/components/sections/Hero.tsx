@@ -51,7 +51,11 @@ export default function Hero() {
             )}
 
             {/* центральный логотип */}
-            <div className="absolute inset-0 z-30 flex flex-col items-center justify-center text-center pointer-events-none px-6">
+            <div className="
+            absolute inset-0 z-30 flex flex-col items-center text-center pointer-events-none px-6
+    justify-start pt-[20%]    /* мобильный вариант */
+    md:justify-center md:pt-0 /* начиная с md — как было по центру */
+            ">
                 <img
                     src={logo}
                     alt="Soboliha"
