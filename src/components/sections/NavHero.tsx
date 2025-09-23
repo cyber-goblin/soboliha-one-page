@@ -9,16 +9,15 @@ export default function NavHero() {
     return (
         <nav
             className="
-        absolute left-0 right-0 z-[70] text-white
-        /* ниже синего header на мобилке */
-        top-[calc(env(safe-area-inset-top)+50px)]
-        sm:top-[calc(env(safe-area-inset-top)+54px)]
-        md:top-16 lg:top-16
-      "
+                fixed top-[64px] left-0 right-0 z-[70]
+
+                text-white
+            "
         >
-            <div className="mx-auto max-w-7xl px-3 sm:px-4">
-                {/* ЛОГО: скрыт на мобилке, виден с md+ */}
-                <div className="hidden md:flex items-center justify-between gap-4 mb-0">
+            <div className="mx-auto max-w-7xl px-3 sm:px-4 py-3 md:py-4">
+                {/* ДЕСКТОП */}
+                <div className="hidden md:flex items-center justify-between gap-6">
+                    {/* ЛОГО */}
                     <img
                         src={logoWhite}
                         alt="Soboliha"
@@ -26,8 +25,8 @@ export default function NavHero() {
                         draggable={false}
                     />
 
-                    {/* ДЕСКТОП: телефон + соцсети + кнопка */}
-                    <div className="hidden md:flex items-center gap-16">
+                    {/* Центр: телефон + соцсети */}
+                    <div className="flex items-center gap-12">
                         <a
                             href="tel:+78314230006"
                             className="inline-flex items-center gap-3 hover:opacity-80 transition text-lg md:text-xl"
@@ -50,48 +49,40 @@ export default function NavHero() {
                                 <img src={wsIcon} alt="Whatsapp" className="h-7 w-7" />
                             </a>
                         </div>
-
-                        <a
-                            href="#"
-                            className="rounded-xl border border-[#d7b68a] px-7 py-4 text-lg md:text-xl text-center leading-tight hover:bg-[#d7b68a]/10 transition text-white font-semibold"
-                        >
-                            скачать презентацию
-                        </a>
                     </div>
+
+                    {/* Кнопка */}
+                    <a
+                        href="#"
+                        className="rounded-xl border border-[#d7b68a] px-7 py-3 text-lg md:text-xl font-semibold hover:bg-[#d7b68a]/10 transition"
+                    >
+                        скачать презентацию
+                    </a>
                 </div>
 
-                {/* МОБИЛЬНЫЙ: ОДНА СТРОКА без логотипа */}
-                <div className="md:hidden flex items-center justify-between gap-2 flex-nowrap">
+                {/* МОБИЛЬНЫЙ */}
+                <div className="flex md:hidden items-center justify-between gap-2">
                     {/* телефон */}
                     <a
                         href="tel:+78314230006"
-                        className="inline-flex items-center gap-1.5 text-[12px] font-semibold leading-none whitespace-nowrap shrink-0"
+                        className="inline-flex items-center gap-1.5 text-[12px] font-semibold leading-none"
                     >
                         <Phone className="h-4 w-4" />
-                        <span className="whitespace-nowrap">+7 (831) 423 00 06</span>
+                        <span>+7 (831) 423 00 06</span>
                     </a>
 
                     {/* соцсети */}
-                    <div className="min-w-0 flex items-center justify-center gap-2 flex-nowrap">
-                        <img src={vkIcon} alt="VK" className="h-4 w-4 shrink-0" />
-                        <img src={tgIcon} alt="Telegram" className="h-4 w-4 shrink-0" />
-                        <img src={instIcon} alt="Instagram" className="h-4 w-4 shrink-0" />
-                        <img src={wsIcon} alt="Whatsapp" className="h-4 w-4 shrink-0" />
+                    <div className="flex items-center gap-2">
+                        <img src={vkIcon} alt="VK" className="h-4 w-4" />
+                        <img src={tgIcon} alt="Telegram" className="h-4 w-4" />
+                        <img src={instIcon} alt="Instagram" className="h-4 w-4" />
+                        <img src={wsIcon} alt="Whatsapp" className="h-4 w-4" />
                     </div>
 
                     {/* кнопка */}
-                    {/* кнопка */}
                     <a
                         href="#"
-                        className="
-    inline-flex items-center justify-center shrink-0
-    h-auto px-3 py-2
-    rounded-lg border border-white
-    text-[12px] font-semibold leading-tight whitespace-nowrap
-    text-white
-    hover:bg-white/10
-    text-center
-  "
+                        className="px-3 py-2 rounded-lg border border-[#d7b68a] text-[11px] font-semibold hover:bg-[#d7b68a]/10 transition text-center leading-tight"
                     >
                         скачать<br />презентацию
                     </a>
