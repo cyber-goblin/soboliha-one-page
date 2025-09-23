@@ -116,61 +116,73 @@ export default function Hero() {
             {/* Инфо-баннер */}
             {phase === "done" && (
                 <div
-                    className="
-      absolute z-[40]
-      left-1/2 -translate-x-1/2 bottom-6 w-[92vw]
-      md:bottom-auto md:top-1/2 md:-translate-y-1/2
-      md:left-auto md:translate-x-0 md:right-[clamp(12px,2vw,32px)]
+                    className="absolute z-[40]
 
-      /* было: md:w-[clamp(380px,32vw,440px)] lg:w-[clamp(460px,34vw,540px)] xl:w-[clamp(500px,36vw,580px)] */
-      md:w-[clamp(340px,28vw,400px)]
-      lg:w-[clamp(420px,30vw,500px)]
-      xl:w-[clamp(480px,32vw,560px)]
+  /* мобилка — снизу по центру */
+  left-1/2 -translate-x-1/2 bottom-6 w-[92vw]
 
-      rounded-2xl bg-[#0e2036]/80 backdrop-blur-[2px] text-white
-      shadow-[0_10px_30px_rgba(0,0,0,.35)]
-      px-4 py-5 md:px-6 md:py-8 lg:px-8 lg:py-10
-      overflow-hidden     /* добавили: чтобы контент не вылезал за края */
-    "
+  /* md/lg — фикс под навом */
+  md:left-auto md:bottom-auto
+  md:top-[calc(env(safe-area-inset-top)+168px)] md:translate-x-0 md:translate-y-0
+  lg:top-[calc(env(safe-area-inset-top)+196px)]
+
+  /* отступы справа по брейкпоинтам */
+  md:right-6
+  lg:right-12
+  xl:right-[clamp(70px,5vw,200px)]   /* двигаем к центру на больших */
+
+  /* ширина компактнее на ноутбуках */
+  md:w-[clamp(360px,38vw,420px)]
+  lg:w-[clamp(420px,32vw,500px)]
+  xl:w-[clamp(520px,34vw,600px)]
+
+  /* xl+ — можно снова центрировать по высоте */
+  xl:top-1/2 xl:-translate-y-1/2
+
+  rounded-2xl bg-[#0e2036]/80 backdrop-blur-[2px] text-white
+  shadow-[0_10px_30px_rgba(0,0,0,.35)]
+  px-4 py-5 md:px-6 md:py-7 lg:px-8 lg:py-9
+  overflow-hidden"
                 >
-                    <div className="grid grid-cols-[1fr_auto_1fr] items-start gap-6 md:gap-8">
-                        <div className="flex flex-col items-start">
-                            <div className="text-4xl md:text-6xl font-extrabold leading-none">17&nbsp;га</div>
-                            <div className="text-base md:text-xl opacity-90 leading-snug mt-1">
+                    <div className="grid grid-cols-[auto_auto_1fr] items-start gap-6 md:gap-6">
+                        {/* ЛЕВО */}
+                        <div className="flex flex-col items-start shrink-0">
+                            <div className="text-4xl md:text-5xl font-extrabold leading-none">17&nbsp;га</div>
+                            <div className="text-base md:text-sm opacity-90 leading-snug mt-1">
                                 земли в<br className="hidden md:block" /> вековом лесу
                             </div>
                         </div>
 
-                        <div className="w-[2px] md:w-[3px] bg-white/85 rounded-full self-stretch" />
+                        {/* разделитель */}
+                        <div className="w-[2px] bg-white/85 rounded-full self-stretch" />
 
                         {/* ПРАВО */}
-                        <div className="flex flex-col items-center md:items-start col-span-1 min-w-0">
-                            <div className="text-base md:text-xl font-semibold mb-3 md:mb-3 leading-tight text-center md:text-left">
+                        <div className="flex flex-col items-center md:items-start min-w-[240px]">
+                            <div className="text-base md:text-lg font-semibold mb-3 leading-tight text-center md:text-left">
                                 все<br className="hidden md:block" /> коммуникации
                             </div>
 
-                            {/* ИКОНКИ */}
-                            <div className="flex flex-wrap gap-3 md:gap-4 pr-1">
-                                {/* 1 */}
-                                <div className="flex flex-col items-center">
-                                    <div className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center border border-white/80 rounded-md">
-                                        <img src={lampIcon} alt="свет" className="w-7 h-7 md:w-8 md:h-8" />
+                            {/* ИКОНКИ — ОДНА СТРОКА */}
+                            <div className="flex flex-nowrap items-center gap-3 md:gap-3">
+                                <div className="flex flex-col items-center shrink-0">
+                                    <div className="w-12 h-12 flex items-center justify-center border border-white/80 rounded-md">
+                                        <img src={lampIcon} alt="свет" className="w-7 h-7" />
                                     </div>
-                                    <span className="mt-1 md:mt-1 text-xs md:text-sm opacity-90">свет</span>
+                                    <span className="mt-1 text-xs opacity-90">свет</span>
                                 </div>
-                                {/* 2 */}
-                                <div className="flex flex-col items-center">
-                                    <div className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center border border-white/80 rounded-md">
-                                        <img src={gasIcon} alt="газ" className="w-7 h-7 md:w-8 md:h-8" />
+
+                                <div className="flex flex-col items-center shrink-0">
+                                    <div className="w-12 h-12 flex items-center justify-center border border-white/80 rounded-md">
+                                        <img src={gasIcon} alt="газ" className="w-7 h-7" />
                                     </div>
-                                    <span className="mt-1 md:mt-1 text-xs md:text-sm opacity-90">газ</span>
+                                    <span className="mt-1 text-xs opacity-90">газ</span>
                                 </div>
-                                {/* 3 */}
-                                <div className="flex flex-col items-center">
-                                    <div className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center border border-white/80 rounded-md">
-                                        <img src={waterIcon} alt="вода" className="w-7 h-7 md:w-8 md:h-8" />
+
+                                <div className="flex flex-col items-center shrink-0">
+                                    <div className="w-12 h-12 flex items-center justify-center border border-white/80 rounded-md">
+                                        <img src={waterIcon} alt="вода" className="w-7 h-7" />
                                     </div>
-                                    <span className="mt-1 md:mt-1 text-xs md:text-sm opacity-90">вода</span>
+                                    <span className="mt-1 text-xs opacity-90">вода</span>
                                 </div>
                             </div>
                         </div>
@@ -178,7 +190,14 @@ export default function Hero() {
 
                     <div className="mt-5 md:mt-6 h-[2px] md:h-[3px] bg-white/85 rounded-full" />
 
-                    <button className="mt-4 md:mt-5 w-full rounded-md border border-[#d7b68a]/85 bg-transparent py-2 md:py-3 px-3 font-semibold text-[#d7b68a] text-sm md:text-base tracking-wide hover:bg-[#d7b68a] hover:text-black transition">
+                    <button
+                        className="
+        mt-4 md:mt-5 w-full rounded-md border border-[#d7b68a]/85
+        bg-transparent py-2 md:py-3 px-3 font-semibold text-[#d7b68a]
+        text-sm md:text-base tracking-wide hover:bg-[#d7b68a] hover:text-black
+        transition
+      "
+                    >
                         ЗАКАЗАТЬ ЗВОНОК
                     </button>
                 </div>
