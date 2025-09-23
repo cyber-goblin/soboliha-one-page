@@ -53,8 +53,9 @@ export default function Hero() {
             {/* центральный логотип */}
             <div className="
             absolute inset-0 z-30 flex flex-col items-center text-center pointer-events-none px-6
-    justify-start pt-[20%]    /* мобильный вариант */
-    md:justify-center md:pt-0 /* начиная с md — как было по центру */
+    justify-start pt-[120px]   /* мобильный: опускаем на фиксированное расстояние */
+    sm:pt-[140px]              /* чуть больше на sm */
+    md:justify-center md:pt-0  /* начиная с md — как было по центру */
             ">
                 <img
                     src={logo}
@@ -67,12 +68,12 @@ export default function Hero() {
                 {phase === "done" && (
                     <>
                         <h2 className="mt-6 text-2xl sm:text-3xl md:hidden font-extrabold text-white leading-tight">
-                            «Soboliha Residence» –
+                            «Soboliha Residence»
                         </h2>
                         <p className="mt-2 text-base sm:text-lg md:hidden leading-snug text-[#d7b68a] font-medium">
                             первый поселок бизнес-класса<br />
                             в едином архитектурном стиле<br />
-                            на Горьковском море.
+                            на Горьковском море
                         </p>
                     </>
                 )}
