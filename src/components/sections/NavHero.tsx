@@ -9,7 +9,7 @@ export default function NavHero() {
     return (
         <nav
             className="
-                fixed top-[64px] left-0 right-0 z-[70]
+                fixed top-[44px] left-0 right-0 z-[70]
 
                 text-white
             "
