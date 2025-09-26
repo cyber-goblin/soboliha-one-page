@@ -2,9 +2,16 @@
 export default {
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
     theme: {
+        screens: {
+            sm: "640px",
+            md: "768px",
+            lg: "1024px",
+            xl: "1280px",
+            "2xl": "1536px",
+        },
         extend: {
             screens: {
-                'desk': '1110px', // новый кастомный брейкпоинт
+                hd: "1080px", // ✅ единичное добавление, без лишней вложенности
             },
             fontFamily: {
                 actay: ["Actay", "sans-serif"],
@@ -12,4 +19,4 @@ export default {
         },
     },
     plugins: [],
-}
+};

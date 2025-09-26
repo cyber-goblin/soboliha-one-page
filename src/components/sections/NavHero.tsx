@@ -9,19 +9,18 @@ export default function NavHero() {
     return (
         <nav
             className="
-                fixed top-[54px] left-0 right-0 z-[70]
-
-                text-white
-            "
+        fixed top-[54px] left-0 right-0 z-[70]
+        text-white
+      "
         >
-            <div className="mx-auto max-w-7xl px-3 sm:px-1 py-3 md:py-4">
-                {/* ДЕСКТОП */}
-                <div className="hidden md:flex items-center justify-between gap-6">
-                    {/* ЛОГО */}
+            <div className="mx-auto max-w-7xl px-3 sm:px-1 py-3 min-[1080px]:py-4">
+                {/* ДЕСКТОП ≥1080px */}
+                <div className="hidden min-[1080px]:flex items-center justify-between gap-6">
+                    {/* ЛОГО — привязан к левому краю общего контейнера */}
                     <img
                         src={logoWhite}
                         alt="Soboliha"
-                        className="h-10 md:h-14 lg:h-[64px]"
+                        className="h-10 min-[1080px]:h-14 lg:h-[64px]"
                         draggable={false}
                     />
 
@@ -29,7 +28,7 @@ export default function NavHero() {
                     <div className="flex items-center gap-12">
                         <a
                             href="tel:+78314230006"
-                            className="ml-26 inline-flex items-center gap-3 hover:opacity-80 transition text-lg md:text-xl"
+                            className="inline-flex items-center gap-3 hover:opacity-80 transition text-lg min-[1080px]:text-xl"
                         >
                             <Phone className="h-6 w-6" />
                             <span className="font-actay font-bold">+7 (831) 423 00 06</span>
@@ -51,17 +50,17 @@ export default function NavHero() {
                         </div>
                     </div>
 
-                    {/* Кнопка */}
+                    {/* Кнопка — привязана к правому краю общего контейнера */}
                     <a
                         href="#"
-                        className="rounded-xl border border-[#d7b68a] px-7 py-3 text-lg md:text-xl font-actay font-normal hover:bg-[#d7b68a]/10 transition"
+                        className="rounded-xl border border-[#d7b68a] px-7 py-3 text-lg min-[1080px]:text-xl font-actay font-normal hover:bg-[#d7b68a]/10 transition text-center leading-tight"
                     >
                         скачать<br />презентацию
                     </a>
                 </div>
 
-                {/* МОБИЛЬНЫЙ */}
-                <div className="flex md:hidden items-center justify-between gap-2">
+                {/* МОБИЛЬНЫЙ <1080px */}
+                <div className="flex min-[1080px]:hidden items-center justify-between gap-2">
                     {/* телефон */}
                     <a
                         href="tel:+78314230006"
