@@ -19,6 +19,7 @@ export default function Footer() {
           text-center md:text-left
           gap-x-3 gap-y-1
           leading-snug
+          font-actay font-normal
         "
                 style={{ color: beige }}
             >

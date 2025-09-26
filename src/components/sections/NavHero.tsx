@@ -9,12 +9,12 @@ export default function NavHero() {
     return (
         <nav
             className="
-                fixed top-[44px] left-0 right-0 z-[70]
+                fixed top-[54px] left-0 right-0 z-[70]
 
                 text-white
             "
         >
-            <div className="mx-auto max-w-7xl px-3 sm:px-4 py-3 md:py-4">
+            <div className="mx-auto max-w-7xl px-3 sm:px-1 py-3 md:py-4">
                 {/* ДЕСКТОП */}
                 <div className="hidden md:flex items-center justify-between gap-6">
                     {/* ЛОГО */}
@@ -29,13 +29,13 @@ export default function NavHero() {
                     <div className="flex items-center gap-12">
                         <a
                             href="tel:+78314230006"
-                            className="inline-flex items-center gap-3 hover:opacity-80 transition text-lg md:text-xl"
+                            className="ml-26 inline-flex items-center gap-3 hover:opacity-80 transition text-lg md:text-xl"
                         >
                             <Phone className="h-6 w-6" />
-                            <span className="font-semibold">+7 (831) 423 00 06</span>
+                            <span className="font-actay font-bold">+7 (831) 423 00 06</span>
                         </a>
 
-                        <div className="flex items-center gap-5 opacity-90">
+                        <div className="flex items-center gap-6 opacity-90">
                             <a href="#" aria-label="VK" className="hover:opacity-75 transition" target="_blank" rel="noreferrer">
                                 <img src={vkIcon} alt="VK" className="h-7 w-7" />
                             </a>
@@ -54,9 +54,9 @@ export default function NavHero() {
                     {/* Кнопка */}
                     <a
                         href="#"
-                        className="rounded-xl border border-[#d7b68a] px-7 py-3 text-lg md:text-xl font-semibold hover:bg-[#d7b68a]/10 transition"
+                        className="rounded-xl border border-[#d7b68a] px-7 py-3 text-lg md:text-xl font-actay font-normal hover:bg-[#d7b68a]/10 transition"
                     >
-                        скачать презентацию
+                        скачать<br />презентацию
                     </a>
                 </div>
 

@@ -115,61 +115,90 @@ export default function Hero() {
             {/* Десктопный левый текстовый блок */}
             {phase === "done" && (
                 <div className="hidden md:block absolute left-[5%] top-1/2 -translate-y-1/2 z-[40] max-w-xl xl:max-w-2xl xl:left-[6%]">
-                    <h2 className="text-3xl md:text-4xl xl:text-[clamp(2.25rem,2.4vw,3.5rem)] font-extrabold text-white mb-4 leading-tight">
+                    <h2
+                        className="text-3xl md:text-4xl xl:text-[clamp(2.25rem,2.4vw,3.5rem)]
+                 font-actay font-bold text-white mb-4 leading-tight"
+                    >
                         «Soboliha Residence»
                     </h2>
-                    <p className="text-lg md:text-xl xl:text-[clamp(1.25rem,1.6vw,2rem)] leading-snug text-[#d7b68a] font-medium">
-                        первый поселок бизнес-класса<br /> в едином архитектурном стиле<br /> на Горьковском море
+                    <p
+                        className="text-lg md:text-xl xl:text-[clamp(1.25rem,1.6vw,2rem)]
+                 leading-snug text-[#d7b68a] font-actay font-normal"
+                    >
+                        первый поселок бизнес-класса<br />
+                        в едином архитектурном стиле<br />
+                        на Горьковском море
                     </p>
                 </div>
             )}
+
             {phase === "done" && <NavHero />}
             {/* Десктопный инфо-баннер */}
             {phase === "done" && (
-                <div className="hidden md:block absolute z-[40] right-6 translate-x-0 top-1/2 -translate-y-1/2 bottom-auto xl:right-20 2xl:right-28 rounded-2xl bg-[#0e2036]/80 backdrop-blur-[2px] text-white shadow-[0_10px_30px_rgba(0,0,0,.35)] px-5 py-6 w-[380px] lg:w-[400px]">
-                    <div className="grid grid-cols-[1fr_auto_1fr] gap-4 items-start">
-                        {/* ЛЕВО */}
+                <div className="hidden md:block absolute z-[40] right-8 xl:right-20 2xl:right-28 top-1/2 -translate-y-1/2
+                  w-[440px] xl:w-[400px] rounded-2xl bg-[#0e2036]/75 backdrop-blur-[2px]
+                  shadow-[0_14px_40px_rgba(0,0,0,.38)] px-7 py-7">
+                    <div className="grid grid-cols-[1fr_auto_1fr] gap-5 items-start">
+                        {/* ЛЕВО: 17 га */}
                         <div className="flex flex-col items-start">
-                            <div className="text-4xl font-extrabold leading-none">17&nbsp;га</div>
-                            <div className="text-sm opacity-90 leading-snug mt-1">
-                                земли в<br /> вековом лесу
+                            <div className="text-5xl xl:text-[56px] font-actay font-bold leading-none">
+                                17&nbsp;га
+                            </div>
+                            <div className="mt-2 text-[15px] leading-snug opacity-90 font-actay font-normal">
+                                земли в<br />вековом лесу
                             </div>
                         </div>
+
                         {/* Вертикальный разделитель */}
-                        <div className="w-[2px] bg-white/85 rounded-full self-stretch" />
-                        {/* ПРАВО */}
+                        <div className="self-stretch w-px bg-white/80 rounded-full" />
+
+                        {/* ПРАВО: все коммуникации + иконки */}
                         <div className="flex flex-col items-start">
-                            <div className="text-base font-semibold mb-2 leading-tight"> все коммуникации </div>
-                            <div className="flex items-center gap-3">
+                            <div className="text-[17px] font-actay font-normal leading-tight tracking-wide uppercase text-white/95 mb-3">
+                                все коммуникации
+                            </div>
+                            <div className="flex items-center gap-3.5">
+                                {/* свет */}
                                 <div className="flex flex-col items-center">
-                                    <div className="w-10 h-10 flex items-center justify-center border border-white/80 rounded-md">
-                                        <img src={lampIcon} alt="свет" className="w-6 h-6" />
+                                    <div className="w-[54px] h-[54px] flex items-center justify-center rounded-xl border border-white/85 p-2">
+                                        <img src={lampIcon} alt="свет" className="w-7 h-7" />
                                     </div>
-                                    <span className="mt-1 text-xs opacity-90">свет</span>
+                                    <span className="mt-1 text-[12px] opacity-90 font-actay font-normal">свет</span>
                                 </div>
+                                {/* газ */}
                                 <div className="flex flex-col items-center">
-                                    <div className="w-10 h-10 flex items-center justify-center border border-white/80 rounded-md">
-                                        <img src={gasIcon} alt="газ" className="w-6 h-6" />
+                                    <div className="w-[54px] h-[54px] flex items-center justify-center rounded-xl border border-white/85 p-2">
+                                        <img src={gasIcon} alt="газ" className="w-7 h-7" />
                                     </div>
-                                    <span className="mt-1 text-xs opacity-90">газ</span>
+                                    <span className="mt-1 text-[12px] opacity-90 font-actay font-normal">газ</span>
                                 </div>
+                                {/* вода */}
                                 <div className="flex flex-col items-center">
-                                    <div className="w-10 h-10 flex items-center justify-center border border-white/80 rounded-md">
-                                        <img src={waterIcon} alt="вода" className="w-6 h-6" />
+                                    <div className="w-[54px] h-[54px] flex items-center justify-center rounded-xl border border-white/85 p-2">
+                                        <img src={waterIcon} alt="вода" className="w-7 h-7" />
                                     </div>
-                                    <span className="mt-1 text-xs opacity-90">вода</span>
+                                    <span className="mt-1 text-[12px] opacity-90 font-actay font-normal">вода</span>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     {/* Горизонтальная линия */}
-                    <div className="mt-5 h-[2px] bg-white/85 rounded-full" />
+                    <div className="mt-6 h-px bg-white/85 rounded-full" />
+
                     {/* Кнопка */}
-                    <button className="mt-4 w-full rounded-md border border-[#d7b68a]/85 bg-transparent py-2 px-3 font-semibold text-[#d7b68a] text-sm tracking-wide hover:bg-[#d7b68a] hover:text-black transition">
-                        ЗАКАЗАТЬ ЗВОНОК
-                    </button>
+                    <div className="mt-4 flex justify-center">
+                        <button
+                            className="rounded-xl border border-[#d7b68a] bg-transparent
+                   py-2 px-6 text-[14px] font-actay font-normal tracking-wide text-[#d7b68a]
+                   hover:bg-[#d7b68a]/10 transition"
+                        >
+                            ЗАКАЗАТЬ ЗВОНОК
+                        </button>
+                    </div>
                 </div>
             )}
+
 
         </section>
     );
