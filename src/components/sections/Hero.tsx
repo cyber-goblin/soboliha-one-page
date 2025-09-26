@@ -135,9 +135,20 @@ export default function Hero() {
             {phase === "done" && <NavHero />}
             {/* Десктопный инфо-баннер */}
             {phase === "done" && (
-                <div className="hidden md:block absolute z-[40] right-8 xl:right-20 2xl:right-28 top-1/2 -translate-y-1/2
-                  w-[440px] xl:w-[400px] rounded-2xl bg-[#0e2036]/75 backdrop-blur-[2px]
-                  shadow-[0_14px_40px_rgba(0,0,0,.38)] px-7 py-7">
+                <div className="
+                hidden md:block absolute z-[40]
+    right-8 xl:right-10 2xl:right-28
+    top-1/2 -translate-y-1/2
+
+    /* ширина по брейкпоинтам: на lg (1024) делаем уже */
+    w-[380px] lg:w-[360px] xl:w-[420px]
+
+    rounded-2xl bg-[#0e2036]/75 backdrop-blur-[2px]
+    shadow-[0_14px_40px_rgba(0,0,0,.38)]
+
+    /* паддинги тоже ужмём на lg */
+    px-7 py-7 lg:px-5 lg:py-5
+                  ">
                     <div className="grid grid-cols-[1fr_auto_1fr] gap-5 items-start">
                         {/* ЛЕВО: 17 га */}
                         <div className="flex flex-col items-start">
