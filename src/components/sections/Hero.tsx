@@ -62,7 +62,7 @@ export default function Hero() {
             )}
 
             {/* центральный контент */}
-            <div className="absolute inset-0 z-30 flex flex-col items-center text-center pointer-events-none px-6 justify-start pt-[15vh] min-[1080px]:justify-center min-[1080px]:pt-0">
+            <div className="absolute inset-0 z-30 flex flex-col items-center text-center px-6 justify-start pt-[15vh] overflow-y-auto min-[1080px]:justify-center min-[1080px]:pt-0 min-[1080px]:overflow-visible">
                 <img
                     src={logo}
                     alt="Soboliha"
