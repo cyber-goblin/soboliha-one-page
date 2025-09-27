@@ -62,14 +62,13 @@ export default function Hero() {
             )}
 
             {/* центральный контент */}
-            <div className="absolute inset-0 z-30 flex flex-col items-center text-center pointer-events-none px-6 justify-start pt-[120px] sm:pt-[10px] min-[1080px]:justify-center min-[1080px]:pt-0">
+            <div className="absolute inset-0 z-30 flex flex-col items-center text-center pointer-events-none px-6 justify-start pt-[15vh] min-[1080px]:justify-center min-[1080px]:pt-0">
                 <img
                     src={logo}
                     alt="Soboliha"
-                    className={`transition-opacity duration-600 ${
+                    className={`transition-opacity duration-600 h-[12rem] sm:h-[15rem] ${
                         logoVisible ? "opacity-100" : "opacity-0"
                     }`}
-                    style={{ height: "15rem" }}
                 />
 
                 {phase === "done" && (
@@ -88,7 +87,7 @@ export default function Hero() {
 
                 {/* мобильный инфо-баннер — только до 1080px */}
                 {phase === "done" && (
-                    <div className="mt-auto mb-6 min-[1080px]:hidden pointer-events-auto rounded-2xl bg-[#0e2036]/80 backdrop-blur-[2px] text-white shadow-[0_10px_30px_rgba(0,0,0,.35)] px-5 py-6 w-[360px]">
+                    <div className="mt-[10vh] mb-6 min-[1080px]:hidden pointer-events-auto rounded-2xl bg-[#0e2036]/80 backdrop-blur-[2px] text-white shadow-[0_10px_30px_rgba(0,0,0,.35)] px-5 py-6 w-full max-w-[360px]">
                         <div className="grid grid-cols-[1fr_auto_1fr] gap-4 items-start">
                             <div className="flex flex-col items-start">
                                 <div className="text-4xl font-extrabold leading-none">17&nbsp;га</div>
@@ -173,8 +172,8 @@ export default function Hero() {
                                                 className="w-[64px] h-[64px] object-contain block"
                                             />
                                             <span className="mt-1 text-[12px] opacity-90 font-actay font-normal">
-            свет
-          </span>
+                                                свет
+                                            </span>
                                         </div>
                                         <div className="flex flex-col items-center">
                                             <img
@@ -183,8 +182,8 @@ export default function Hero() {
                                                 className="w-[64px] h-[64px] object-contain block"
                                             />
                                             <span className="mt-1 text-[12px] opacity-90 font-actay font-normal">
-            газ
-          </span>
+                                                газ
+                                            </span>
                                         </div>
                                         <div className="flex flex-col items-center">
                                             <img
@@ -193,8 +192,8 @@ export default function Hero() {
                                                 className="w-[64px] h-[64px] object-contain block"
                                             />
                                             <span className="mt-1 text-[12px] opacity-90 font-actay font-normal">
-            вода
-          </span>
+                                                вода
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -207,7 +206,6 @@ export default function Hero() {
                                 </button>
                             </div>
                         </div>
-
                     </div>
                 </div>
             )}

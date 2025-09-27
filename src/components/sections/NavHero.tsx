@@ -72,10 +72,18 @@ export default function NavHero() {
 
                     {/* соцсети */}
                     <div className="flex items-center gap-2">
-                        <img src={vkIcon} alt="VK" className="h-4 w-4" />
-                        <img src={tgIcon} alt="Telegram" className="h-4 w-4" />
-                        <img src={instIcon} alt="Instagram" className="h-4 w-4" />
-                        <img src={wsIcon} alt="Whatsapp" className="h-4 w-4" />
+                        <a href="#" aria-label="VK" className="hover:opacity-75 transition" target="_blank" rel="noreferrer">
+                            <img src={vkIcon} alt="VK" className="h-4 w-4" />
+                        </a>
+                        <a href="#" aria-label="Telegram" className="hover:opacity-75 transition" target="_blank" rel="noreferrer">
+                            <img src={tgIcon} alt="Telegram" className="h-4 w-4" />
+                        </a>
+                        <a href="#" aria-label="Instagram" className="hover:opacity-75 transition" target="_blank" rel="noreferrer">
+                            <img src={instIcon} alt="Instagram" className="h-4 w-4" />
+                        </a>
+                        <a href="#" aria-label="Whatsapp" className="hover:opacity-75 transition" target="_blank" rel="noreferrer">
+                            <img src={wsIcon} alt="Whatsapp" className="h-4 w-4" />
+                        </a>
                     </div>
 
                     {/* кнопка */}
