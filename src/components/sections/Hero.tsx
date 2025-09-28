@@ -4,6 +4,8 @@ import logo from "../../assets/img/ui/logo-whitee.png";
 import banner from "../../assets/video/banner.mp4";
 import Header from "../../components/sections/Header";
 import NavHero from "../../components/sections/NavHero";
+import ModalHost from "../../components/ModalHost";
+import { openModal } from "../../utils/modal";
 
 // PNG-иконки (с уже нарисованной рамкой)
 import waterIcon from "../../assets/img/water_icon.png";
@@ -62,11 +64,11 @@ export default function Hero() {
             )}
 
             {/* центральный контент */}
-            <div className="absolute inset-0 z-30 flex flex-col items-center text-center px-6 justify-start pt-[15vh] overflow-y-auto min-[1080px]:justify-center min-[1080px]:pt-0 min-[1080px]:overflow-visible">
+            <div className="absolute inset-0 z-30 flex flex-col items-center text-center pointer-events-none px-6 justify-start pt-[15vh] min-[1080px]:justify-center min-[1080px]:pt-0">
                 <img
                     src={logo}
                     alt="Soboliha"
-                    className={`transition-opacity duration-600 h-[12rem] sm:h-[15rem] ${
+                    className={`transition-opacity duration-600 h-[11rem] sm:h-[14rem] ${
                         logoVisible ? "opacity-100" : "opacity-0"
                     }`}
                 />
@@ -74,10 +76,7 @@ export default function Hero() {
                 {phase === "done" && (
                     <>
                         {/* заголовок/подзаголовок — только до 1080px */}
-                        <h2 className="mt-6 text-2xl sm:text-3xl font-extrabold text-white leading-tight min-[1080px]:hidden">
-                            «Soboliha Residence»
-                        </h2>
-                        <p className="mt-2 text-base sm:text-lg leading-snug text-[#d7b68a] font-medium min-[1080px]:hidden">
+                        <p className="mt-6 text-base sm:text-lg leading-snug text-[#d7b68a] font-medium min-[1080px]:hidden">
                             первый поселок бизнес-класса
                             <br /> в едином архитектурном стиле
                             <br /> на Горьковском море
@@ -120,7 +119,10 @@ export default function Hero() {
                         </div>
 
                         <div className="mt-5 h-[2px] bg-white/85 rounded-full" />
-                        <button className="mt-4 w-full rounded-md border border-[#d7b68a]/85 bg-transparent py-2 px-3 font-semibold text-[#d7b68a] text-sm tracking-wide hover:bg-[#d7b68a] hover:text-black transition">
+                        <button
+                            onClick={() => openModal('callback')}
+                            className="rounded-xl border border-[#d7b68a] bg-transparent py-2 px-6 text-[14px] font-actay font-normal tracking-wide text-[#d7b68a] hover:bg-[#d7b68a]/10 transition pointer-events-auto"
+                        >
                             ЗАКАЗАТЬ ЗВОНОК
                         </button>
                     </div>
@@ -201,16 +203,21 @@ export default function Hero() {
 
                             <div className="mt-6 h-px bg-white/85 rounded-full" />
                             <div className="mt-4 flex justify-center">
-                                <button className="rounded-xl border border-[#d7b68a] bg-transparent py-2 px-6 text-[14px] font-actay font-normal tracking-wide text-[#d7b68a] hover:bg-[#d7b68a]/10 transition">
+                                <button
+                                    onClick={() => openModal('callback')}
+                                    className="rounded-xl border border-[#d7b68a] bg-transparent py-2 px-6 text-[14px] font-actay font-normal tracking-wide text-[#d7b68a] hover:bg-[#d7b68a]/10 transition pointer-events-auto"
+                                >
                                     ЗАКАЗАТЬ ЗВОНОК
                                 </button>
                             </div>
                         </div>
+
                     </div>
                 </div>
             )}
 
             {phase === "done" && <NavHero />}
+            <ModalHost />
         </section>
     );
 }

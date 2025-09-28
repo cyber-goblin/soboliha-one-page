@@ -1,9 +1,8 @@
 import logoWhite from "../../assets/img/ui/logo-white.png";
 import { Phone } from "lucide-react";
-import vkIcon from "../../assets/img/icons/vk_icon.png";
 import tgIcon from "../../assets/img/icons/telegram_icon.png";
 import instIcon from "../../assets/img/icons/instagramm_icon.png";
-import wsIcon from "../../assets/img/icons/whatsupp_icon.png";
+import { openModal } from "../../utils/modal";
 
 export default function NavHero() {
     return (
@@ -35,28 +34,22 @@ export default function NavHero() {
                         </a>
 
                         <div className="flex items-center gap-6 opacity-90">
-                            <a href="#" aria-label="VK" className="hover:opacity-75 transition" target="_blank" rel="noreferrer">
-                                <img src={vkIcon} alt="VK" className="h-7 w-7" />
-                            </a>
                             <a href="#" aria-label="Telegram" className="hover:opacity-75 transition" target="_blank" rel="noreferrer">
                                 <img src={tgIcon} alt="Telegram" className="h-7 w-7" />
                             </a>
                             <a href="#" aria-label="Instagram" className="hover:opacity-75 transition" target="_blank" rel="noreferrer">
                                 <img src={instIcon} alt="Instagram" className="h-7 w-7" />
                             </a>
-                            <a href="#" aria-label="Whatsapp" className="hover:opacity-75 transition" target="_blank" rel="noreferrer">
-                                <img src={wsIcon} alt="Whatsapp" className="h-7 w-7" />
-                            </a>
                         </div>
                     </div>
 
                     {/* Кнопка — привязана к правому краю общего контейнера */}
-                    <a
-                        href="#"
+                    <button
+                        onClick={() => openModal('presentation')}
                         className="rounded-xl border border-[#d7b68a] px-7 py-3 text-lg min-[1080px]:text-xl font-actay font-normal hover:bg-[#d7b68a]/10 transition text-center leading-tight"
                     >
-                        скачать<br />презентацию
-                    </a>
+                        скачать<br/>презентацию
+                    </button>
                 </div>
 
                 {/* МОБИЛЬНЫЙ <1080px */}
@@ -72,27 +65,21 @@ export default function NavHero() {
 
                     {/* соцсети */}
                     <div className="flex items-center gap-2">
-                        <a href="#" aria-label="VK" className="hover:opacity-75 transition" target="_blank" rel="noreferrer">
-                            <img src={vkIcon} alt="VK" className="h-4 w-4" />
-                        </a>
                         <a href="#" aria-label="Telegram" className="hover:opacity-75 transition" target="_blank" rel="noreferrer">
                             <img src={tgIcon} alt="Telegram" className="h-4 w-4" />
                         </a>
                         <a href="#" aria-label="Instagram" className="hover:opacity-75 transition" target="_blank" rel="noreferrer">
                             <img src={instIcon} alt="Instagram" className="h-4 w-4" />
                         </a>
-                        <a href="#" aria-label="Whatsapp" className="hover:opacity-75 transition" target="_blank" rel="noreferrer">
-                            <img src={wsIcon} alt="Whatsapp" className="h-4 w-4" />
-                        </a>
                     </div>
 
                     {/* кнопка */}
-                    <a
-                        href="#"
-                        className="px-3 py-2 rounded-lg border border-[#d7b68a] text-[11px] font-semibold hover:bg-[#d7b68a]/10 transition text-center leading-tight"
+                    <button
+                        onClick={() => openModal('presentation')}
+                        className="rounded-xl border border-[#d7b68a] px-7 py-3 text-lg min-[1080px]:text-xl font-actay font-normal hover:bg-[#d7b68a]/10 transition text-center leading-tight"
                     >
-                        скачать<br />презентацию
-                    </a>
+                        скачать<br/>презентацию
+                    </button>
                 </div>
             </div>
         </nav>
