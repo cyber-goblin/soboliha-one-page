@@ -48,7 +48,7 @@ export default function NavHero() {
                     {/* Кнопка */}
                     <button
                         onClick={() => openModal("presentation")}
-                        className="rounded-xl border border-[#d7b68a] px-7 py-3 text-lg min-[1080px]:text-xl font-actay font-normal hover:bg-[#d7b68a]/10 transition text-center leading-tight"
+                        className="rounded-xl border border-[#d7b68a] px-7 py-3 text-lg min-[1080px]:text-xl font-actay font-normal hover:bg-[#d7b68a]/10 transition text-left leading-tight"
                     >
                         скачать<br />презентацию
                     </button>
@@ -87,7 +87,7 @@ export default function NavHero() {
 
                     <button
                         onClick={() => openModal("presentation")}
-                        className="rounded-xl border border-[#d7b68a] px-7 py-3 text-lg min-[1080px]:text-xl font-actay font-normal hover:bg-[#d7b68a]/10 transition text-center leading-tight"
+                        className="rounded-xl border border-[#d7b68a] px-7 py-3 text-lg min-[1080px]:text-xl font-actay font-normal hover:bg-[#d7b68a]/10 transition text-left leading-tight"
                     >
                         скачать<br />презентацию
                     </button>
