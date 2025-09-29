@@ -87,10 +87,11 @@ export default function NavHero() {
 
                     <button
                         onClick={() => openModal("presentation")}
-                        className="rounded-xl border border-[#d7b68a] px-7 py-3 text-lg min-[1080px]:text-xl font-actay font-normal hover:bg-[#d7b68a]/10 transition text-left leading-tight"
+                        className="rounded-xl border border-[#d7b68a] px-1 py-1 text-lg min-[1080px]:text-xl font-actay font-normal hover:bg-[#d7b68a]/10 transition text-left leading-tight"
                     >
                         скачать<br />презентацию
                     </button>
+
                 </div>
             </div>
         </nav>

@@ -92,7 +92,7 @@ export default function Hero() {
 
                 {/* мобильный инфо-баннер — только до 1080px */}
                 {phase === "done" && (
-                    <div className="mt-4 mb-6 min-[1080px]:hidden pointer-events-auto rounded-2xl bg-[#0e2036]/80 backdrop-blur-[2px] text-white shadow-[0_10px_30px_rgba(0,0,0,.35)] px-5 py-6 w-full max-w-[360px]">
+                    <div className="mt-2 mb-6 min-[1080px]:hidden pointer-events-auto rounded-2xl bg-[#0e2036]/80 backdrop-blur-[2px] text-white shadow-[0_10px_30px_rgba(0,0,0,.35)] px-4 py-2 w-full max-w-[360px]">
                         <div className="grid grid-cols-[1fr_auto_1fr] gap-4 items-start uppercase">
                             <div className="flex flex-col items-start">
                                 <div className="text-4xl font-extrabold leading-none">17&nbsp;га</div>
@@ -127,7 +127,7 @@ export default function Hero() {
                         <div className="mt-5 h-[2px] bg-white/85 rounded-full" />
                         <button
                             onClick={() => openModal("callback")}
-                            className="mt-6 rounded-xl border border-[#d7b68a] bg-transparent py-2 px-6 text-[14px] font-actay font-normal tracking-wide text-[#d7b68a] hover:bg-[#d7b68a]/10 transition pointer-events-auto"
+                            className="mt-3 rounded-xl border border-[#d7b68a] bg-transparent py-2 px-6 text-[14px] font-actay font-normal tracking-wide text-[#d7b68a] hover:bg-[#d7b68a]/10 transition pointer-events-auto"
                         >
                             ЗАКАЗАТЬ ЗВОНОК
                         </button>
