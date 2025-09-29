@@ -11,7 +11,12 @@ export default function NavHero() {
                 {/* ДЕСКТОП ≥1080px */}
                 <div className="hidden min-[1080px]:flex items-center justify-between gap-6">
                     {/* ЛОГО */}
-                    <img src={logoWhite} alt="Soboliha" className="h-10 min-[1080px]:h-14 lg:h-[64px]" draggable={false} />
+                    <img
+                        src={logoWhite}
+                        alt="Soboliha"
+                        className="h-10 min-[1080px]:h-14 lg:h-[64px]"
+                        draggable={false}
+                    />
 
                     {/* Центр: телефон + соцсети */}
                     <div className="flex items-center gap-12">
@@ -48,9 +53,11 @@ export default function NavHero() {
                     {/* Кнопка */}
                     <button
                         onClick={() => openModal("presentation")}
-                        className="rounded-xl border border-[#d7b68a] px-7 py-3 text-lg min-[1080px]:text-xl font-actay font-normal hover:bg-[#d7b68a]/10 transition text-left leading-tight"
+                        className="rounded-xl border border-[#d7b68a] px-7 py-3 text-lg min-[1080px]:text-xl font-actay font-normal hover:bg-[#d7b68a]/10 transition text-center leading-tight"
                     >
-                        скачать<br />презентацию
+                        скачать
+                        <br />
+                        презентацию
                     </button>
                 </div>
 
@@ -85,13 +92,15 @@ export default function NavHero() {
                         </a>
                     </div>
 
+                    {/* уменьшенная кнопка + выравнивание текста по центру */}
                     <button
                         onClick={() => openModal("presentation")}
-                        className="rounded-xl border border-[#d7b68a] px-1 py-1 text-lg min-[1080px]:text-xl font-actay font-normal hover:bg-[#d7b68a]/10 transition text-left leading-tight"
+                        className="rounded-lg border border-[#d7b68a] px-3 py-1.5 text-[11px] font-actay font-medium leading-[1.05] text-center hover:bg-[#d7b68a]/10 transition"
                     >
-                        скачать<br />презентацию
+                        скачать
+                        <br />
+                        презентацию
                     </button>
-
                 </div>
             </div>
         </nav>
