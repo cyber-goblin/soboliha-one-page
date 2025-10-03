@@ -105,30 +105,29 @@ export default function Hero() {
                             <div className="w-[2px] bg-white/85 rounded-full self-stretch" />
 
                             <div className="flex flex-col items-start">
-                                <div className="text-[12px] font-semibold mb-1 leading-tight uppercase">
-                                    все коммуникации
-                                </div>
-                                <div className="flex items-center gap-2">
+                                <div className="text-base font-semibold mb-2 leading-tight">все коммуникации</div>
+                                <div className="flex items-center gap-3">
+                                    {/* фикс. размер 40×40 */}
                                     <div className="flex flex-col items-center">
-                                        <img src={lampIcon} alt="свет" className="w-8 h-8 object-contain block" />
-                                        <span className="mt-0.5 text-[10px] opacity-90 uppercase">свет</span>
+                                        <img src={lampIcon} alt="свет" className="w-10 h-10 object-contain block" />
+                                        <span className="mt-1 text-xs opacity-90">свет</span>
                                     </div>
                                     <div className="flex flex-col items-center">
-                                        <img src={gasIcon} alt="газ" className="w-8 h-8 object-contain block" />
-                                        <span className="mt-0.5 text-[10px] opacity-90 uppercase">газ</span>
+                                        <img src={gasIcon} alt="газ" className="w-10 h-10 object-contain block" />
+                                        <span className="mt-1 text-xs opacity-90">газ</span>
                                     </div>
                                     <div className="flex flex-col items-center">
-                                        <img src={waterIcon} alt="вода" className="w-8 h-8 object-contain block" />
-                                        <span className="mt-0.5 text-[10px] opacity-90 uppercase">вода</span>
+                                        <img src={waterIcon} alt="вода" className="w-10 h-10 object-contain block" />
+                                        <span className="mt-1 text-xs opacity-90">вода</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="mt-3 h-[2px] bg-white/85 rounded-full" />
+                        <div className="mt-5 h-[2px] bg-white/85 rounded-full" />
                         <button
                             onClick={() => openModal("callback")}
-                            className="mt-3 w-full rounded-md border border-[#d7b68a]/85 bg-transparent py-1.5 px-3 font-semibold text-[#d7b68a] text-xs tracking-wide hover:bg-[#d7b68a] hover:text-black transition"
+                            className="mt-4 w-full rounded-md border border-[#d7b68a]/85 bg-transparent py-2 px-3 font-semibold text-[#d7b68a] text-sm tracking-wide hover:bg-[#d7b68a] hover:text-black transition"
                         >
                             ЗАКАЗАТЬ ЗВОНОК
                         </button>
@@ -141,10 +140,10 @@ export default function Hero() {
                     <div className="mx-auto max-w-7xl px-3 sm:px-1 h-full relative">
                         {/* левый текст — только ≥1080px */}
                         <div className="hidden min-[1080px]:block absolute left-0 top-1/2 -translate-y-1/2 max-w-xl xl:max-w-2xl uppercase">
-                            <h2 className="text-3xl min-[1080px]:text-4xl xl:text-[clamp(2.25rem,2.4vw,3.5rem)] font-actay font-bold text-white mb-4 leading-tight">
+                            <h2 className="text-3xl min-[1080px]:text-4xl xl:text-3xl font-actay font-bold text-white mb-4 leading-tight">
                                 «Soboliha Residence»
                             </h2>
-                            <p className="text-lg min-[1080px]:text-xl xl:text-[clamp(1.25rem,1.6vw,2rem)] leading-snug text-[#d7b68a] font-actay font-normal">
+                            <p className="text-lg min-[1080px]:text-xl xl:text-xl leading-snug text-[#d7b68a] font-actay font-normal">
                                 первый поселок бизнес-класса
                                 <br />
                                 в едином архитектурном стиле
@@ -157,10 +156,7 @@ export default function Hero() {
                         <div className="hidden min-[1080px]:block absolute right-0 top-1/2 -translate-y-1/2 w-[380px] lg:w-[360px] xl:w-[420px] rounded-2xl bg-[#0e2036]/75 backdrop-blur-[2px] shadow-[0_14px_40px_rgba(0,0,0,.38)] px-7 py-7 lg:px-5 lg:py-5">
                             <div className="grid grid-cols-[1fr_auto_1fr] gap-5 items-start uppercase">
                                 <div className="flex flex-col items-start">
-                                    <div className="flex items-end leading-none">
-                                        <span className="text-5xl xl:text-[65px] font-actay font-bold tabular-nums">17</span>
-                                        <span className="-ml-0.5 text-3xl xl:text-[38px] font-actay font-bold normal-case">га</span>
-                                    </div>
+                                    <div className="text-5xl xl:text-[65px] font-actay font-bold leading-none">17&nbsp;га</div>
                                     <div className="mt-3 text-[18px] leading-snug opacity-90 font-actay font-normal ml-3">
                                         земли в
                                         <br />
