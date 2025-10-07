@@ -31,12 +31,12 @@ export default function Hero() {
     }, []);
 
     return (
-        <section className="relative h-[100svh] w-full overflow-hidden text-white">
+        <section className="relative min-h-[100svh] w-full text-white">
             {phase === "done" && <Header />}
 
             {/* видео фон */}
             <video
-                className="absolute inset-0 h-full w-full object-cover brightness-[.65]"
+                className="fixed inset-0 h-full w-full object-cover brightness-[.65]"
                 src={banner}
                 autoPlay
                 muted
@@ -47,12 +47,12 @@ export default function Hero() {
             />
 
             {/* затемнение */}
-            <div className="absolute inset-0 z-10 bg-black/40" />
+            <div className="fixed inset-0 z-10 bg-black/40" />
 
             {/* подложка */}
             {phase !== "done" && (
                 <div
-                    className={`absolute inset-0 z-20 transition-transform duration-900 ${
+                    className={`fixed inset-0 z-20 transition-transform duration-900 ${
                         phase === "lifting" ? "-translate-y-full" : "translate-y-0"
                     }`}
                     style={{
@@ -66,7 +66,7 @@ export default function Hero() {
             {/* центральный контент */}
             <div
                 className="
-          absolute inset-0 z-30 flex flex-col items-center text-center pointer-events-none px-6
+          relative min-h-[100svh] z-30 flex flex-col items-center text-center pointer-events-none px-6
           justify-start pt-[22vh] sm:pt-[24vh]
           min-[1080px]:justify-center min-[1080px]:pt-0
         "
@@ -136,7 +136,7 @@ export default function Hero() {
             </div>
 
             {phase === "done" && (
-                <div className="absolute inset-x-0 top-0 h-full z-40 pointer-events-none">
+                <div className="fixed inset-x-0 top-0 h-[100vh] z-40 pointer-events-none">
                     <div className="mx-auto max-w-7xl px-3 sm:px-1 h-full relative">
                         {/* левый текст — только ≥1080px */}
                         <div className="hidden min-[1080px]:block absolute left-0 top-1/2 -translate-y-1/2 max-w-xl xl:max-w-2xl uppercase">
