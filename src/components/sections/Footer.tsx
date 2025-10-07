@@ -29,7 +29,7 @@ export default function Footer() {
                 <span className="hidden sm:inline">|</span>
                 <span>Политика обработки данных</span>
                 <span className="hidden sm:inline">|</span>
-                <span>ООО «СК Резиденция», © 2025</span>
+
             </div>
         </footer>
     );
