@@ -83,8 +83,8 @@ export default function Hero() {
                     <>
                         {/* заголовок/подзаголовок — только до 1080px */}
                         <p className="mt-4 text-base sm:text-lg leading-snug text-[#d7b68a] font-medium min-[1080px]:hidden">
-                            первый поселок бизнес-класса
-                            <br /> в едином архитектурном стиле
+                            первый поселок премиум-класса
+                            <br /> с единой архитектурной концепцией
                             <br /> на Горьковском море
                         </p>
                     </>
@@ -144,9 +144,9 @@ export default function Hero() {
                                 «Soboliha Residence»
                             </h2>
                             <p className="text-lg min-[1080px]:text-xl xl:text-xl leading-snug text-[#d7b68a] font-actay font-normal">
-                                первый поселок бизнес-класса
+                                первый поселок премиум-класса
                                 <br />
-                                в едином архитектурном стиле
+                                с единой архитектурной концепцией
                                 <br />
                                 на Горьковском море
                             </p>
